@@ -26,6 +26,7 @@ int main(int argc, char *argv[]) {
   } else {
     // parent goes down this path (original process)
     int wc = wait(NULL);
+    printf("%d\n",wc);
     assert(wc >= 0);
   }
   return 0;
