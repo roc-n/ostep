@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Compile",
+            "command": "clang",
+            "args": [
+                "${file}",
+                // "${fileDirname}/lib/Class_adjList_map.cpp",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.out",
+                "-Wall", // 开启额外警告
+                "-g",
+                // "-O2",
+                //"-L./Map/lib",
+                //"-lClass_adjList_map",
+                "-static-libgcc", // 静态链接libgcc，一般都会加上
+                "-std=gnu99",
+            ],
+            "options": {
+                // "cwd": "C:\\mingw64\\bin"
+            }
+        }
+    ],
+}
